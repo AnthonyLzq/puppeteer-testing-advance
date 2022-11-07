@@ -8,16 +8,19 @@
     "service": "nodemon",
     "start": "node dist/index.js",
     "release": "standard-version",
-    "test": "jest --setupFiles dotenv/config --forceExit --ci -i"
+    "test": "jest --setupFiles dotenv/config --forceExit --ci -i -u",
+    "visual:test": "jest --setupFiles dotenv/config --forceExit --testPathPattern=test/visual.test.ts"
   },
   "author": "AnthonyLzq <sluzquinosa@uni.pe>",
   "license": "MIT",
   "dependencies": {
+    "jest-image-snapshot": "^6.0.0",
     "puppeteer": "^19.2.2"
   },
   "devDependencies": {
     "@jest/types": "^29.2.1",
     "@types/jest": "^29.2.1",
+    "@types/jest-image-snapshot": "^5.1.0",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
