@@ -1,4 +1,5 @@
 import puppeteer, { KnownDevices } from 'puppeteer'
+import { waitForTimeout } from './helpers'
 
 describe('Device emulation', () => {
   let browser: puppeteer.Browser
@@ -13,7 +14,7 @@ describe('Device emulation', () => {
     await page.goto(process.env.SITE_URL as string, {
       waitUntil: 'networkidle2'
     })
-  }, 10_000)
+  }, 15_000)
 
   afterAll(async () => {
     await browser.close()
@@ -39,20 +40,20 @@ describe('Device emulation', () => {
       width: 1560,
       height: 800
     })
-    await page.waitForTimeout(3000)
+    await waitForTimeout(3000)
   }, 20_000)
 
   test('Tablet emulation using puppeteer devices', async () => {
     const tablet = KnownDevices['iPad Pro']
 
     await page.emulate(tablet)
-    await page.waitForTimeout(3000)
+    await waitForTimeout(3000)
   }, 20_000)
 
   test('Phone emulation using puppeteer devices', async () => {
     const iPhone = KnownDevices['iPhone 12 Pro Max']
 
     await page.emulate(iPhone)
-    await page.waitForTimeout(3000)
+    await waitForTimeout(3000)
   }, 20_000)
 })

@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer'
+import { getCount } from './helpers'
 
 describe('Incognito mode', () => {
   let browser: puppeteer.Browser
@@ -20,8 +21,8 @@ describe('Incognito mode', () => {
     await browser.close()
   })
 
-  it('should habe at least one image', async () => {
-    const images = await page.$$eval('img', el => el.length)
+  it('should have at least one image', async () => {
+    const images = await getCount(page, 'img')
 
     expect(images).toBeGreaterThanOrEqual(1)
   }, 20_000)
