@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@axe-core/puppeteer': ^4.5.0
   '@jest/types': ^29.2.1
   '@types/jest': ^29.2.1
   '@types/jest-image-snapshot': ^5.1.0
@@ -34,6 +35,7 @@ specifiers:
   webpack-node-externals: ^3.0.0
 
 dependencies:
+  '@axe-core/puppeteer': 4.5.0_puppeteer@19.2.2
   jest-image-snapshot: 6.0.0_jest@29.2.2
   puppeteer: 19.2.2
 
@@ -76,6 +78,16 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
+
+  /@axe-core/puppeteer/4.5.0_puppeteer@19.2.2:
+    resolution: {integrity: sha512-FYJ/e2wiOC/fpuNz+AqwMMqI/z40IFX2J6BtIZDzC2bZCqAAtUeJZFYIwsi8MtSbL+2HkQAQru9HuvyaR7Z3Rw==}
+    engines: {node: '>=6.4.0'}
+    peerDependencies:
+      puppeteer: '>=1.10.0 <= 18'
+    dependencies:
+      axe-core: 4.5.1
+      puppeteer: 19.2.2
+    dev: false
 
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
@@ -1245,6 +1257,11 @@ packages:
       es-abstract: 1.20.4
       es-shim-unscopables: 1.0.0
     dev: true
+
+  /axe-core/4.5.1:
+    resolution: {integrity: sha512-1exVbW0X1O/HSr/WMwnaweyqcWOgZgLiVxdLG34pvSQk4NlYQr9OUy0JLwuhFfuVNQzzqgH57eYzkFBCb3bIsQ==}
+    engines: {node: '>=4'}
+    dev: false
 
   /babel-jest/29.2.2_@babel+core@7.19.6:
     resolution: {integrity: sha512-kkq2QSDIuvpgfoac3WZ1OOcHsQQDU5xYk2Ql7tLdJ8BVAYbefEXal+NfS45Y5LVZA7cxC8KYcQMObpCt1J025w==}

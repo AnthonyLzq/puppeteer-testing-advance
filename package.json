@@ -14,6 +14,7 @@
   "author": "AnthonyLzq <sluzquinosa@uni.pe>",
   "license": "MIT",
   "dependencies": {
+    "@axe-core/puppeteer": "^4.5.0",
     "jest-image-snapshot": "^6.0.0",
     "puppeteer": "^19.2.2"
   },
