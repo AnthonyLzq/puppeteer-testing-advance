@@ -17,7 +17,7 @@ const click = async ({
 }: {
   page: Page
   selector: string
-  opt: ClickOptions
+  opt?: ClickOptions
 }): Promise<void> => {
   await page.waitForSelector(selector)
   await page.click(selector, opt)
