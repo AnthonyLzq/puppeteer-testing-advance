@@ -11,7 +11,18 @@ const config: Config.InitialOptions = {
   testRegex: '.test.ts$',
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest'
-  }
+  },
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        publicPath: './report',
+        filename: 'test.html',
+        openReport: true
+      }
+    ]
+  ]
 }
 
 export default config
