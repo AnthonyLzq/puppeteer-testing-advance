@@ -61,5 +61,20 @@
       "src/**/*.test.ts"
     ],
     "exec": "npx ts-node -r dotenv/config ./src/index"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyLzq/puppeteer-testing-advance.git"
+  },
+  "keywords": [
+    "jest",
+    "puppeteer"
+  ],
+  "bugs": {
+    "url": "https://github.com/AnthonyLzq/puppeteer-testing-advance/issues"
+  },
+  "homepage": "https://github.com/AnthonyLzq/puppeteer-testing-advance#readme"
 }
